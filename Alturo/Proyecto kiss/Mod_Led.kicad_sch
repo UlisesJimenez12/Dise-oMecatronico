@@ -347,26 +347,26 @@
         )
       )
     )
-    (symbol "power:GNDREF" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:Earth" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -6.35 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "GNDREF" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
+      (property "Value" "Earth" (at 0 -3.81 0)
+        (effects (font (size 1.27 1.27)) hide)
       )
       (property "Footprint" "" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "" (at 0 0 0)
+      (property "Datasheet" "~" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "global power" (at 0 0 0)
+      (property "ki_keywords" "global ground gnd" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"GNDREF\" , reference supply ground" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"Earth\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "GNDREF_0_1"
+      (symbol "Earth_0_1"
         (polyline
           (pts
             (xy -0.635 -1.905)
@@ -400,9 +400,9 @@
           (fill (type none))
         )
       )
-      (symbol "GNDREF_1_1"
+      (symbol "Earth_1_1"
         (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GNDREF" (effects (font (size 1.27 1.27))))
+          (name "Earth" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -476,6 +476,9 @@
   (junction (at 234.95 60.96) (diameter 0) (color 0 0 0 0)
     (uuid 62147824-9213-438d-823e-c7935056677e)
   )
+  (junction (at 82.55 109.22) (diameter 0) (color 0 0 0 0)
+    (uuid 63f91a8d-4553-4e43-b3db-b7f2e86c3f04)
+  )
   (junction (at 185.42 60.96) (diameter 0) (color 0 0 0 0)
     (uuid 6891724e-f9d6-4fbf-9f4a-10b00e52f6f0)
   )
@@ -529,9 +532,6 @@
   )
   (junction (at 226.06 60.96) (diameter 0) (color 0 0 0 0)
     (uuid e02ffff5-639c-4f56-99d9-f66486275464)
-  )
-  (junction (at 82.55 109.22) (diameter 0) (color 0 0 0 0)
-    (uuid eb79bb26-962e-41df-85da-47ada294225c)
   )
   (junction (at 111.76 86.36) (diameter 0) (color 0 0 0 0)
     (uuid fc47154d-54ef-4b6e-b36c-36d16db34070)
@@ -1196,41 +1196,6 @@
     )
   )
 
-  (symbol (lib_id "power:GNDREF") (at 82.55 109.22 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 3e6085b4-8a1c-4cef-851b-9cf6a5c017ab)
-    (property "Reference" "#PWR09" (at 82.55 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GNDREF" (at 78.74 114.3 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 82.55 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 82.55 109.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8594b42e-d3f1-4517-8a65-a55660f88d20))
-    (instances
-      (project "KISS_V2"
-        (path "/65dfba5e-78e0-455d-92b3-d370168d98c5/769603bd-ecbf-46b5-a166-ba7906ee1166"
-          (reference "#PWR09") (unit 1)
-        )
-      )
-      (project "driver"
-        (path "/e72c8f76-7b49-4479-9cd2-c8df4a0571e7"
-          (reference "#PWR?") (unit 1)
-        )
-      )
-      (project "Proyecto kiss"
-        (path "/e9fd9658-b200-4aa5-b329-c1636df53c02/43ce7ec9-de9c-4a2d-b356-863f187df326"
-          (reference "#PWR01") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 185.42 68.58 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 45167696-e03f-450c-81f9-d46b8469841b)
@@ -1350,6 +1315,39 @@
       (project "Proyecto kiss"
         (path "/e9fd9658-b200-4aa5-b329-c1636df53c02/43ce7ec9-de9c-4a2d-b356-863f187df326"
           (reference "D18") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:Earth") (at 82.55 109.22 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4ea1c84d-d540-41b5-83d6-5f83a420ed72)
+    (property "Reference" "#PWR04" (at 82.55 115.57 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "Earth" (at 82.55 113.03 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "" (at 82.55 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 82.55 109.22 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ccf05ee4-93fc-47bf-8079-65bcfb7b7447))
+    (instances
+      (project "KISS_V2"
+        (path "/65dfba5e-78e0-455d-92b3-d370168d98c5/4b3fec45-17f7-4493-b982-1ebc81656281"
+          (reference "#PWR04") (unit 1)
+        )
+      )
+      (project "Proyecto kiss"
+        (path "/e9fd9658-b200-4aa5-b329-c1636df53c02"
+          (reference "#PWR02") (unit 1)
+        )
+        (path "/e9fd9658-b200-4aa5-b329-c1636df53c02/43ce7ec9-de9c-4a2d-b356-863f187df326"
+          (reference "#PWR01") (unit 1)
         )
       )
     )
